@@ -1,0 +1,16 @@
+{
+  "tests": "./test/e2e/features/*.js",
+  "timeout": 10000,
+  "output": "./test/e2e/output",
+  "helpers": {
+    "Puppeteer": {
+      "url": "http://localhost"
+    }
+  },
+  "include": {
+    "I": "./test/e2e/steps/steps.js"
+  },
+  "bootstrap": false,
+  "mocha": {},
+  "name": "POC_Codecept"
+}
