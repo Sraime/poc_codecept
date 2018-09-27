@@ -1,13 +1,29 @@
+const I = actor();
 
-'use strict';
-// in this file you can append custom step methods to 'I' object
+Given('je vais sur la home page', () => {
+  I.amOnPage('https://www.fr.sogeti.com/');
+});
 
-module.exports = function() {
-  return actor({
+Then('le titre de la page est {string}', () => {
+  I.seeInTitle("Sogeti France | Gérez la transformation numérique de votre entreprise avec Sogeti");
+});
 
-    seeRightNav: function() {
-      this.seeElement('.navbar-right');
-    }
+Then('la navigation a droite est accessible', () => {
+  I.seeElement('.navbar-right');
+});
 
-  });
-}
+When('je click sur l icon de recherche', () => {
+  I.click('.navbar-right > .navbar-search');
+});
+
+Then('le formulaire de recherche s affiche', () => {
+  I.seeElement('#SearchFormHeader');
+});
+
+When('je click sur l icon de pays', () => {
+  I.click('.navbar-right > .navbar-global');
+});
+
+Then('la liste des pays s affiche', () => {
+  I.seeElement('.country-list');
+});

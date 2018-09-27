@@ -7,6 +7,10 @@
     "cc:init": "codeceptjs init",
     "cc:run": "codeceptjs run",
     "cc:gt": "codeceptjs gt",
+
+    "cc:gherkin:init": "codeceptjs gherkin:init",
+    "cc:gherkin:snippets": "codeceptjs gherkin:snippets",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -1,6 +1,4 @@
 {
-  "tests": "./test/e2e/features/*.js",
-  "timeout": 10000,
   "output": "./test/e2e/output",
   "helpers": {
     "Puppeteer": {
@@ -10,7 +8,22 @@
   "include": {
     "I": "./test/e2e/steps/steps.js"
   },
-  "bootstrap": false,
   "mocha": {},
+  "bootstrap": false,
+  "teardown": null,
+  "hooks": [],
+  "gherkin": {
+    "features": "./test/e2e/features/*.feature",
+    "steps": [
+      "./test/e2e/steps/steps.js"
+    ]
+  },
+  "plugins": {
+    "screenshotOnFail": {
+      "enabled": true
+    }
+  },
+  "tests": "./test/e2e/features/*.js",
+  "timeout": 10000,
   "name": "POC_Codecept"
 }
