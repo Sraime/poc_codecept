@@ -10,7 +10,14 @@ Scenario('test title', (I) => {
 });
 
 Scenario('test search form', (I) => {
+    I.seeRightNav();
     I.seeElement('.navbar-right > .navbar-search');
     I.click('.navbar-right > .navbar-search');
     I.seeElement('#SearchFormHeader');
+})
+
+Scenario('test change country', (I) => {
+    I.seeRightNav();
+    I.click('.navbar-right > .navbar-global');
+    I.seeElement('.country-list');
 })
