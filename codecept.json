@@ -21,6 +21,9 @@
   "plugins": {
     "screenshotOnFail": {
       "enabled": true
+    },
+    "allure": {
+      "enabled": true
     }
   },
   "tests": "./test/e2e/features/*.js",

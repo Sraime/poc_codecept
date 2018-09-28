@@ -11,6 +11,7 @@
     "cc:gherkin:init": "codeceptjs gherkin:init",
     "cc:gherkin:snippets": "codeceptjs gherkin:snippets",
 
+    "allure:serve": "allure serve ./test/e2e/output",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -19,6 +20,7 @@
     "codeceptjs": "^1.4.2"
   },
   "devDependencies": {
+    "allure-commandline": "^2.7.0",
     "puppeteer": "^1.6.0"
   }
 }
